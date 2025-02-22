@@ -1,7 +1,5 @@
 package com.vytrack.pages;
 
-//Hello, it's me
-//Me again!
 
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
@@ -19,11 +17,6 @@ import java.util.List;
 
 public abstract class BasePage {
 
-
-    // Test
-    // Test1
-    // Test from Illeria
-    // Test from Hilola
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;

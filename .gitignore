@@ -1,7 +1,4 @@
 /target/
 /.idea/
 /*.iml
-
-# IntelliJ IDEA project files
-/.idea/
-/*.iml
+/out
