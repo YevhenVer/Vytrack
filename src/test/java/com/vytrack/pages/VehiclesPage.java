@@ -27,8 +27,8 @@ public class VehiclesPage extends BasePage {
      * Vehicle Costs page locators
      */
 
-    // TODO: change locator
-    @FindBy(xpath = "//span[@class='grid-header-cell__label' and (text()='Type' or text()='Total Price' or text()='Date')]")
+
+    @FindBy(xpath = "//thead[@class='grid-header']//span[1]")
     public List<WebElement> tableColumns;
 
 
