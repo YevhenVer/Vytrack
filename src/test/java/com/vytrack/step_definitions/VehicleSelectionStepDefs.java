@@ -1,6 +1,6 @@
 package com.vytrack.step_definitions;
 
-import com.vytrack.pages.VehicleSelectionPage;
+import com.vytrack.pages.VehiclesPage;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Random;
 
 public class VehicleSelectionStepDefs {
-    VehicleSelectionPage vehiclePage = new VehicleSelectionPage();
+    VehiclesPage vehiclePage = new VehiclesPage();
 
     WebElement selectedCheckbox;
 
