@@ -37,5 +37,8 @@ public class VehiclesPage extends BasePage {
      */
 
 
+    @FindBy(xpath = "//div[@class='message' and contains(text(),'permission')]")
+    public WebElement message;
+
 
 }
