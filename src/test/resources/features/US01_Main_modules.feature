@@ -4,7 +4,7 @@ Feature: Main Modules features
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @wip
+
   Scenario Outline: Verify that users can access all the main modules of the app
     Given the user logged in with username as "<userType>" and password as "<password>"
     And user should be able to see all 8 main modules
