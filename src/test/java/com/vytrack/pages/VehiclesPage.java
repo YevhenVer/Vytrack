@@ -32,13 +32,18 @@ public class VehiclesPage extends BasePage {
     public List<WebElement> tableColumns;
 
 
-    /**
-     * Vehicle Contracts page locators
+    /*
+      Vehicle Contracts page locators
      */
-
-
     @FindBy(xpath = "//div[@class='message' and contains(text(),'permission')]")
     public WebElement message;
 
+    /*
+          Vehicle Odometer page locators
+         */
+    @FindBy(xpath = "//input[@type='number']")
+    public WebElement defaultPage;
 
+    @FindBy(xpath = "//button[@class='btn dropdown-toggle ']")
+    public WebElement viewPerPage;
 }
