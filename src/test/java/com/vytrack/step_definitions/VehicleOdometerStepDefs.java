@@ -5,10 +5,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.sl.In;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class VehicleOdometerStepDefs {
 
@@ -22,9 +18,9 @@ public class VehicleOdometerStepDefs {
     }
 
     @Then("user should see error message {string}")
-    public void user_should_see_error_message(String expectedMessage) {
+    public void user_should_see_error_message(String expectedErrorMessage) {
 
-        Assert.assertEquals("You do not have permission to perform this action.", expectedMessage);
+        Assert.assertEquals(expectedErrorMessage, vehicleOdometerPage.message.getText());
 
     }
 
@@ -37,15 +33,16 @@ public class VehicleOdometerStepDefs {
     }
 
     @Then("user should see the default page as {int}.")
-    public void user_should_see_the_default_page_as(Integer expectedDefaultNum) throws InterruptedException {
+    public void user_should_see_the_default_page_as(Integer expectedDefaultNum) {
 
-//        Integer actualDefaultNum = Integer.valueOf(1);
+//        Integer actualDefaultNum = new Integer();
 //        System.out.println(actualDefaultNum);
 //
 //        Thread.sleep(3);
 //        Assert.assertEquals((int) expectedDefaultNum, (int) actualDefaultNum );
+        Integer actualDefaultNum = Integer.parseInt(vehicleOdometerPage.defaultPage.getDomAttribute("value"));
 
-        Assert.assertEquals((int) expectedDefaultNum, 1);
+        Assert.assertEquals(  expectedDefaultNum, actualDefaultNum);
     }
 
     @Then("user should see the View Per Page as {int} by default.")
@@ -56,7 +53,12 @@ public class VehicleOdometerStepDefs {
 //
 //        Assert.assertEquals((int) expectedPerPageNum, (int) actualPerPageNum);
 
-       Assert.assertEquals((int) expectedPerPageNum, 25);
+        System.out.println(expectedPerPageNum);
+
+        Integer actualViewPerPageNum = Integer.parseInt(vehicleOdometerPage.viewPerPage.getText());
+        Assert.assertEquals( expectedPerPageNum, actualViewPerPageNum);
+
+
           }
 
 
