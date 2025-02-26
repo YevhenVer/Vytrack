@@ -10,9 +10,9 @@ Feature: Manage Filters on Vehicle Costs Page
     Given the user logged in as "<userType>"
     And the user is on the Vehicle Costs page
     Then the user should see a table with exactly 3 columns named:
-      | TYPE         |
-      | TOTAL PRICE  |
-      | DATE         |
+      | TYPE        |
+      | TOTAL PRICE |
+      | DATE        |
 
     Examples:
       | userType      |
