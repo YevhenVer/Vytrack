@@ -41,9 +41,13 @@ public class VehiclesPage extends BasePage {
     /*
           Vehicle Odometer page locators
          */
-    @FindBy(xpath = "//input[@type='number']")
+    //@FindBy(xpath = "//input[@value='1']")
+    @FindBy(xpath = "//li//input[@value='1']")
     public WebElement defaultPage;
 
-    @FindBy(xpath = "//button[@class='btn dropdown-toggle ']")
-    public WebElement viewPerPage;
+   //  @FindBy(xpath = "//*[@class='btn-group']/button[1]/text() ")
+    @FindBy(xpath = "//*[@class='btn-group']/button")
+    //@FindBy(xpath = "//*[@class='btn-group']/button/text()")
+
+     public WebElement viewPerPage;
 }
