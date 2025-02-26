@@ -1,8 +1,6 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.pages.AccountsPage;
-import com.vytrack.pages.BasePage;
-import com.vytrack.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -30,8 +28,6 @@ public class AccountsPageFiltersStepDefs {
         accountsPage.filterButton.click();
 
 
-       // List<String> actual = BrowserUtils.getElementsText(accountsPage.filterItems);
-
         List<String> actual = new ArrayList<>();
 
         for (WebElement each : accountsPage.filterItems) {
@@ -40,7 +36,7 @@ public class AccountsPageFiltersStepDefs {
 
 
         Assert.assertEquals(expectedName,actual);
-        Assert.assertEquals((int)expectedCount,accountsPage.filterItems.size());
+        Assert.assertEquals((int)expectedCount, accountsPage.filterItems.size());
 
 
     }

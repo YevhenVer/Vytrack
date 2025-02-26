@@ -9,7 +9,7 @@ Feature: Filter customers' info on the Accounts page
 
 
   Scenario Outline: Verify that users see 8 filter items on the Accounts page
-    Given the user logged in with username as "<userType>" and password as "<password>"
+    Given the user logged in as "<userType>"
     When the user navigates to the Accounts page
     Then the user should see 8 filter items with following names:
       | Account name  |
@@ -22,6 +22,6 @@ Feature: Filter customers' info on the Accounts page
       | Updated At    |
 
     Examples:
-      | userType        | password    |
-      | storemanager51  | UserUser123 |
-      | salesmanager101 | UserUser123 |
+      | userType      |
+      | Store Manager |
+      | Sales Manager |
