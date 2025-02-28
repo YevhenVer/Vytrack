@@ -1,10 +1,11 @@
-@us14
+@US14
 Feature: managing filters on Marketing page.
   US14: As a user, I want to manage filters on the Marketing page.
 
   Background: User is already in the log in page
     Given the user is on the login page
 
+  @US14_AC01_TC01
   Scenario Outline: Verify login with different user types
     Given the user logged in as "<userType>"
     When the user navigate to "Marketing" and to "Campaigns" page
@@ -18,6 +19,7 @@ Feature: managing filters on Marketing page.
       | Store Manager |
       | Sales Manager |
 
+  @US14_AC02_TC01
   Scenario Outline: Verify login with different user types
     Given the user logged in as "<userType>"
     When the user navigate to "Marketing" and to "Campaigns" page
