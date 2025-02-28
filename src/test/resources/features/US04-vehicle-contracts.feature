@@ -1,4 +1,4 @@
-@US044
+@US04
 Feature: Access to Vehicle Contracts page.
   User Story 4: As a user, I want to access to Vehicle Contracts page.
 
