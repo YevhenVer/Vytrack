@@ -44,6 +44,7 @@ public class VehicleContractsStepDefs {
     public void app_should_display_message(String expectedMessage) throws InterruptedException {
 
         vehicleContractsPage.waitUntilLoaderScreenDisappear();
+
         Assert.assertEquals(expectedMessage, vehicleContractsPage.message.getText());
 
         Thread.sleep(1000);
