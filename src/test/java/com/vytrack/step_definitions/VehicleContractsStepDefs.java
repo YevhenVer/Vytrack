@@ -47,7 +47,7 @@ public class VehicleContractsStepDefs {
 
         Assert.assertEquals(expectedMessage, vehicleContractsPage.message.getText());
 
-        Thread.sleep(1000);
+
     }
 
 }
