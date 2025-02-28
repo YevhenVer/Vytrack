@@ -1,9 +1,11 @@
+@US04
 Feature: Access to Vehicle Contracts page.
   User Story 4: As a user, I want to access to Vehicle Contracts page.
 
   Background: Background: User is already in the log in page
     Given the user is on the login page
 
+    @US04_AC01_TC01
     Scenario Outline: Verify that Store managers and Sales managers can access to the page
     page
       Given the user logged in with username as "<userType>" and password as "<password>"
@@ -17,6 +19,8 @@ Feature: Access to Vehicle Contracts page.
       |storemanager77 | UserUser123|
       |salesmanager107| UserUser123|
 
+
+      @US04_AC02_TC01
       Scenario:Verify that Drivers can not access to the page
       page
         Given the user logged in as "driver"
