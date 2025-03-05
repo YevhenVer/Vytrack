@@ -27,4 +27,25 @@ public class CalendarEventsPage extends BasePage {
     @FindBy(xpath = "//span[text()='This value should not be blank.']")
     public WebElement errorMessage;
 
+
+    /*
+    US 09   INVALID INTEGERS
+     */
+
+    @FindBy(xpath = "(//label//input[@value='-1'])[1]")
+    //@FindBy(xpath = "//input[@class='recurrence-subview-control__number error']")
+    public WebElement negativeInt;
+
+    @FindBy(xpath = "//span[text()='The value have not to be less than 1.']")
+    public WebElement errorNegativeIntMessage;
+
+
+
+
+    @FindBy(xpath = "(//label//input[@value='107'])[1]")
+    public WebElement greaterInt;
+
+    @FindBy(xpath = "//span[text()='The value have not to be more than 99.']")
+    public WebElement errorGreaterIntMessage;
 }
+
