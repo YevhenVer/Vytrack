@@ -50,4 +50,13 @@ public class VehiclesPage extends BasePage {
     //@FindBy(xpath = "//*[@class='btn-group']/button/text()")
 
      public WebElement viewPerPage;
+
+
+    /*
+     Vehicle Model page locators
+     */
+    @FindBy(xpath = "//thead[@class='grid-header']//span[1]")
+    public List<WebElement> tableModelColumns;
+
+
 }
